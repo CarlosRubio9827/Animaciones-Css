@@ -1,0 +1,486 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    background: #fff;
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    counter-reset: score;
+}
+
+
+.phone{
+    position: relative;
+    border: 8px solid black;
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+    background: rgb(159, 185, 252);
+    box-shadow: 10px 12px 10px 0px rgba(0,0,0,0.5); 
+
+}
+
+.layer-1{
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    height: 80%;
+    /* background: grey; */
+    bottom: 0;
+    left: 20%;
+    animation: layer1 2s ease-in-out infinite;
+}
+@keyframes layer1{
+    0%{ 
+        bottom: 0%;
+    }
+    10%{
+        bottom: -1%;
+    }
+    20%{
+        bottom: -2%;
+    }
+    30%{
+        bottom: -3%;
+    }
+    40%{
+        bottom: -4%;
+    }
+    50%{
+        bottom: -5%;
+    }
+    60%{
+        bottom: -4%;
+    }
+    70%{
+        bottom: -3%;
+    }
+    80%{
+        bottom: -2%;
+    }
+    90%{
+        bottom: -1%;   
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+.layer-1 input[type=checkbox]{
+    animation-name: bunny;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+@keyframes bunny{
+    0%{
+        top: 0;
+    }
+    25%{
+        top: 80px;
+    }
+    100%{
+        top: 0;
+    }
+}
+input [type='checkbox']{
+    position: relative;
+    appearance: none;
+    cursor: pointer;
+    height: 50px;
+    margin: 0;
+    top: 0;
+    width: 80px;
+    z-index: 2;
+}
+input[type=checkbox]:focus{
+    appearance: none;
+    outline: none;
+}
+
+input:checked{
+    counter-increment: score;
+}
+
+.score::after{
+    content: counter(score);
+}
+.layer-2{
+    position: absolute;
+    z-index: 2;
+    position: absolute;
+    z-index: 1;
+    width: 70px;
+    height: 80%;
+    /* background: grey; */
+    bottom: 0;
+    right: 20%;
+    animation: layer2 1.5s ease-in-out infinite;
+}
+@keyframes layer2{
+    0%{ 
+        bottom: 0%;
+    }
+    10%{
+        bottom: -1%;
+    }
+    20%{
+        bottom: -2%;
+    }
+    30%{
+        bottom: -3%;
+    }
+    40%{
+        bottom: -4%;
+    }
+    50%{
+        bottom: -5%;
+    }
+    60%{
+        bottom: -4%;
+    }
+    70%{
+        bottom: -3%;
+    }
+    80%{
+        bottom: -2%;
+    }
+    90%{
+        bottom: -1%;   
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+.layer-3{
+    position: absolute;
+    z-index: 3;
+    width: 80%;
+    height: 70%;
+    background: #BB6D50;
+    border-radius: 20px;
+    /* 67A167 
+    A2533A*/
+    bottom: 0;
+    left: 10%;
+}
+.capaVerde:after{
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    top: 0;
+    height: 30px;
+    background: linear-gradient(135deg, #67A167 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #67A167 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #67A167 25%, transparent 25%),
+                linear-gradient(-45deg, #67A167 25%, transparent 25%);
+    background-size: 30px 80px;
+    border-radius: 20px;
+}
+.capaVerde::before {
+    content: "";
+    position: absolute; 
+    /* left: -0px; */
+    top: 15px;
+    width: 100%;
+    height: 40px;
+    background: linear-gradient(135deg, #a6543d 25%, transparent 25%) -50px 0,
+                linear-gradient(-135deg, #a6543d 25%, transparent 25%) -50px 0,
+                linear-gradient(45deg, #a6543d 25%, transparent 25%),
+                linear-gradient(-45deg, #a6543d 25%, transparent 25%);
+    background-size: 30px 100px;
+    background-position: 140px 0 0 30px 0;
+}
+.layer-4{
+    position: absolute;
+    z-index: 4;
+    width: 70px;
+    height: 60%;
+    /* background: grey; */
+    bottom: 0;
+    left: 5%;
+    animation: layer4 0.5s infinite ease-out;
+}
+@keyframes layer4{
+    0%{ 
+        bottom: 0%;
+    }
+    10%{
+        bottom: -1%;
+    }
+    20%{
+        bottom: -2%;
+    }
+    30%{
+        bottom: -3%;
+    }
+    40%{
+        bottom: -4%;
+    }
+    50%{
+        bottom: -5%;
+    }
+    60%{
+        bottom: -4%;
+    }
+    70%{
+        bottom: -3%;
+    }
+    80%{
+        bottom: -2%;
+    }
+    90%{
+        bottom: -1%;   
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+.layer-5{
+    position: absolute;
+    z-index: 5;
+    width: 70%;
+    height: 50%;
+    background: #BB6D50;
+    border-radius: 20px;
+    box-shadow: 5px 0px 10px 0 rgba(0,0,0,0.5);
+    bottom: 0;
+    left: 0;
+}
+.layer-6{
+    position: absolute;
+    z-index: 6;
+    width: 70px;
+    height: 40%;
+    /* background: grey; */
+    bottom: 0;
+    right: 8%;
+    animation: layer6 0.75s infinite linear;
+}
+@keyframes layer6{
+    0%{ 
+        bottom: 0%;
+        
+    }
+    10%{
+        bottom: -1%;
+    }
+    20%{
+        bottom: -2%;
+    }
+    30%{
+        bottom: -3%;
+    }
+    40%{
+        bottom: -4%;
+    }
+    50%{
+        bottom: -5%;
+    }
+    60%{
+        bottom: -4%;
+    }
+    70%{
+        bottom: -3%;
+    }
+    80%{
+        bottom: -2%;
+    }
+    90%{
+        bottom: -1%;
+    }
+    100%{
+        bottom: 0%;
+    }
+}
+.layer-7{
+    position: absolute;
+    z-index: 7;
+    width: 55%;
+    height: 30%;
+    background: #BB6D50;
+    border-radius: 20px;
+    box-shadow: -5px 0px 10px 0 rgba(0,0,0,0.5);
+    bottom: 0;
+    right: 0;
+}
+.layer-8{
+    position: absolute;
+    z-index: 8;
+    width: 60%;
+    height: 20%;
+    bottom: 0;
+    right: 20%;
+}
+.layer-8::before{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 70%;
+    bottom: 0;
+    left: 0;
+    background: #67A167;
+    border-radius: 100px 100px 10px 20px;
+}
+.layer-8::after{
+    position: absolute;
+    content: "";
+    width: 40%;
+    height: 70%;
+    bottom: 0;
+    right: 0;
+    background: #67A167;
+    border-radius: 100px 100px 10px 20px;
+}
+.grass{
+    position: absolute;
+    width: 40%;
+    height: 90%;
+    bottom: 0;
+    left: 30%;
+    background: #67A167;
+    border-radius: 100px 100px 10px 20px;
+}
+.layer-9{
+    position: absolute;
+    z-index: 9;
+    width: 40%;
+    height: 17%;
+    /* background: rosybrown; */
+    bottom: 0;
+    left: 0%;
+}
+.layer-9::before{
+    position: absolute;
+    content: "";
+    width: 75%;
+    height: 100%;
+    background: white;
+    border-radius: 100px 100px 10px 20px;
+}
+.layer-9::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 60%;
+    bottom: 0;
+    right: 0;
+    background: white;
+    border-radius: 100px;
+}
+.layer-10{
+    position: absolute;
+    z-index: 10;
+    width: 40%;
+    height: 17%;
+    bottom: 0;
+    right: 0;
+}
+.layer-10::before{
+    position: absolute;
+    content: "";
+    width: 75%;
+    height: 100%;
+    right: 0;
+    background: white;
+    border-radius: 100px 100px 30px 20px;
+}
+.layer-10::after{
+    position: absolute;
+    content: "";
+    width: 80%;
+    height: 60%;
+    bottom: 0;
+    left: 0;
+    background: white;
+    border-radius: 100px;
+}
+
+.left-ear--outer{
+    position: absolute;
+    display: inline-block;
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    left: 15%;
+}
+.left-ear--inner{
+    position: absolute;
+    background: rosybrown;
+    border-radius: 90%;
+    width: 10px;
+    height: 25px;
+    left: 5px;
+    top: 5px;
+}
+.right-ear--outer{
+    position: absolute;
+    display: inline-block;
+    background: white;
+    border-radius: 90%;
+    width: 20px;
+    height: 50px;
+    right: 15%;
+}
+.right-ear--inner{
+    position: absolute;
+    background: rosybrown;
+    border-radius: 90%;
+    width: 10px;
+    height: 25px;
+    left: 5px;
+    top: 5px;
+}
+.head{
+    position: absolute;
+    background: white;
+    border-radius: 90%;
+    width: 100%;
+    height: 50px;
+    top: 25px;
+}
+
+.head__eye{
+    position: absolute;
+    border-radius: 100%;
+    width: 8px;
+    height: 8px;
+    background: lightblue;
+    box-shadow: inset 0 0 0 2px black;
+    top: 25%;
+    animation-name: blink;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+@keyframes blink{
+    0%{
+        height: 4px;
+    }
+    5%{
+        transform: translate(0, 2px);
+        height: 2px;
+        
+    }
+    10%{
+        transform: translate(0, 0);
+        height: 4px;
+    }
+}
+.head__eye-left{
+    left: 30%;
+}
+.head__eye-right{
+    right: 30%;
+}
+
